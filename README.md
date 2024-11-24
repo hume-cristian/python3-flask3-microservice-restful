@@ -42,6 +42,7 @@ To run this project, install it locally using git:
 Name and contact info
 * Hume Cristian
 * hume-cristian@outlook.com
+* Senior Software Developer (Full-Stack)
 
 ## Version
 * 1.0.0
