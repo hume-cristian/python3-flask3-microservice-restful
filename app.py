@@ -27,12 +27,15 @@ def get_user_by_id(user_id):
 # Route to create a new user
 @app.route("/python/api/v1/users", methods=["POST"])
 def create_user():
-    if not request.json or "title" not in request.json:
+    if not request.json or "first_name" not in request.json:
         return jsonify({"error": "Bad Request"}), 400
     new_user = {
         "id": len(users_list) + 1,
-        "title": request.json["title"],
-        "done": request.json.get("done", False),
+        "first_name": request.json["first_name"],
+        "last_name": request.json["last_name"],
+        "nationality": request.json["nationality"],
+        "occupation": request.json["occupation"],
+        "known_for": request.json["known_for"],
     }
     users_list.append(new_user)
     return jsonify(new_user), 201
